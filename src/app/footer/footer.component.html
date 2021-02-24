@@ -1,0 +1,16 @@
+<footer class="d-flex flex-row justify-content-center">
+  <div
+    *ngFor="let field of fields | keyvalue"
+    [class]="'card w-25 m-2 bg-' + (field.value ? 'primary' : 'secondary')"
+    [routerLink]="'/'.concat(field.key)"
+  >
+    <div class="card-body d-flex flex-column">
+      <div class="card-title text-center">
+        {{ field.key }}
+      </div>
+      <div class="card-text text-center">{{ field.value }}</div>
+    </div>
+  </div>
+  <angular-emojis *ngIf="displayEmoji" [name]="emoji" size="50">
+  </angular-emojis>
+</footer>

@@ -1,0 +1,14 @@
+<div class="myContainer">
+  <h2 class="text-center">What Is Your Favorite Food?</h2>
+  <input
+    class="container form-control"
+    type="text"
+    name="food"
+    #food
+    (blur)="answers.changeAnswer(food)"
+    [value]="answers.fields.food"
+    maxlength="20"
+  />
+  <button class="btn btn-secondary container" routerLink="/sport">NEXT</button>
+</div>
+<app-footer></app-footer>
